@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { OptionInput, SubmitButton } from '../components/Inputs.jsx'
+import { useNavigate } from 'react-router-dom'
 
 const WavingHandEmojiSvg = ({ size }) => {
 	const scale = parseInt(size) * 1.3
@@ -21,9 +22,10 @@ const WavingHandEmojiSvg = ({ size }) => {
 
 const Authorization = ({ username = 'Username' }) => {
 	const [groupValid, setGroupValid] = useState(false)
+	const navigate = useNavigate()
 
 	return (
-		<div className='h-screen w-screen flex justify-center items-center p-4'>
+		<div className='h-screen w-screen flex justify-center items-center p-4 select-none'>
 			<div className='flex flex-col gap-20 w-full -mt-[15vh]'>
 				<div className='flex flex-col gap-1 text-[var(--black)] text-5xl font-semibold'>
 					<p>Приветствую,</p>
@@ -43,7 +45,9 @@ const Authorization = ({ username = 'Username' }) => {
 				<SubmitButton
 					title='Подтвердить'
 					disabled={!groupValid}
-					onClick={() => {}}
+					onClick={() => {
+						navigate('/schedule')
+					}}
 				/>
 			</div>
 		</div>

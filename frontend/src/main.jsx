@@ -15,7 +15,7 @@ import { ErrorProvider } from './context/Errors'
 const App = () => {
 	return (
 		<Routes>
-			<Route path='/auth' element={<Authorization />} />
+			<Route path='/' element={<Authorization />} />
 			<Route path='/schedule' element={<Schedule />} />
 		</Routes>
 	)

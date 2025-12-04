@@ -1,2 +1,6 @@
 @import 'tailwindcss';
 @import './themes.css';
+
+body {
+	background-color: var(--bg);
+}

@@ -2,12 +2,11 @@
 	--bg: #ededed;
 	--white: #ffffff;
 	--black: #111111;
-	--hero-epta: #f32b6a;
+	--hero-epta: #742bf3;
 	--hero-pale: #faf1f4;
 	--middle: #989898;
 	--light-middle: #ededed;
 	--light-gray: #f8f8f8;
-	--hero-shadow: 1px 2px 8px rgba(244, 59, 117, 0.25);
 	--shadow: 1px 2px 8px rgba(0, 0, 0, 0.125);
 }
 
@@ -15,11 +14,10 @@
 	--bg: #1a1a1a;
 	--white: #252525;
 	--black: #f0f0f0;
-	--hero-epta: #f43b75;
+	--hero-epta: #742bf3;
 	--hero-pale: #463037;
 	--middle: #bbbbbb;
 	--light-middle: #222222;
 	--light-gray: #1a1a1a;
-	--hero-shadow: 1px 2px 8px rgba(244, 59, 117, 0.5);
 	--shadow: 1px 2px 8px rgba(0, 0, 0, 0.25);
 }

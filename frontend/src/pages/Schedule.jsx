@@ -52,11 +52,11 @@ const DayCard = ({ isSelected, day, weekDay, onClick }) => {
 		<div
 			onClick={onClick}
 			className={`
-				cursor-pointer rounded-xl shadow-[var(--shadow)] 
+				cursor-pointer rounded-xl shadow-lg 
 				flex items-center justify-center gap-3 text-[var(--black)] 
-				font-medium w-full p-4 
+				font-medium w-full p-4 hover:scale-[102.5%] hover:shadow-xl  active:shadow-md  active:scale-[97.5%]
 				${isSelected ? 'bg-[var(--hero-epta)] text-white' : 'bg-[var(--white)]'}
-			`}
+			 transition-all`}
 		>
 			<div className='flex flex-col items-center justify-center'>
 				<p className='text-3xl'>{day}</p>
@@ -167,7 +167,7 @@ const Schedule = () => {
 	const WeekNumber = allScheduleData?.current_week_number
 
 	return (
-		<div className='flex flex-col gap-2 p-4 h-screen'>
+		<div className='flex flex-col gap-2 p-4 h-screen select-none'>
 			{loading ? (
 				<Loader />
 			) : (
