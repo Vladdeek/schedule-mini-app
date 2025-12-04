@@ -16,6 +16,7 @@ import api, { API } from '../API'
 import axios from 'axios'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { setGlobalError } from '../context/Errors'
+import Loader from '../components/Loader'
 
 const ScheduleCard = ({
 	lessonIndex,
@@ -124,13 +125,7 @@ const Schedule = () => {
 
 		try {
 			const res = await api.get(
-				`${API}/schedule-lessons?week_offset=${current_week}`,
-				{
-					withCredentials: true,
-					headers: {
-						'X-CSRF-TOKEN': getCookie('csrftoken'),
-					},
-				}
+				`${API}/schedule-lessons?week_offset=${current_week}`
 			)
 
 			const data = res.data
@@ -169,7 +164,9 @@ const Schedule = () => {
 	return (
 		<div className='flex flex-col gap-2 p-4 h-screen select-none'>
 			{loading ? (
-				<Loader />
+				<div className='flex w-screen h-screen justify-center items-center'>
+					<Loader />
+				</div>
 			) : (
 				<>
 					{/* Шапка — переключение недель */}

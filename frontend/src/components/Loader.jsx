@@ -90,8 +90,8 @@ const Loader = () => {
 const StyledWrapper = styled.div`
 	.pencil {
 		display: block;
-		width: 2.5em;
-		height: 2.5em;
+		width: 5em;
+		height: 5em;
 	}
 
 	.pencil__body1,
