@@ -17,6 +17,7 @@ import axios from 'axios'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { setGlobalError } from '../context/Errors'
 import Loader from '../components/Loader'
+import { useNavigate } from 'react-router-dom'
 
 const ScheduleCard = ({
 	lessonIndex,
@@ -68,6 +69,7 @@ const DayCard = ({ isSelected, day, weekDay, onClick }) => {
 }
 
 const Schedule = () => {
+	const navigate = useNavigate()
 	const [scheduleData, setScheduleData] = useState({})
 	const [allScheduleData, setAllScheduleData] = useState({})
 	const [loading, setLoading] = useState(false)
@@ -154,7 +156,7 @@ const Schedule = () => {
 	}
 
 	useEffect(() => {
-		loadSchedule()
+		//loadSchedule()
 	}, [current_week])
 
 	const prev_active = allScheduleData?.has_prev
@@ -228,11 +230,21 @@ const Schedule = () => {
 									)
 								})
 							) : (
-								<div className='bg-[var(--white)] rounded-xl shadow-[var(--shadow)] p-4 w-full flex items-center justify-center min_h-[120px]'>
-									<p className='text-[var(--middle)] text-center'>
-										Нет занятий
-									</p>
-								</div>
+								<>
+									<div className='bg-[var(--white)] rounded-xl shadow-[var(--shadow)] p-4 w-full flex items-center justify-center min_h-[120px]'>
+										<p className='text-[var(--middle)] text-center'>
+											Нет занятий
+										</p>
+									</div>
+									<button
+										onClick={() => {
+											navigate('/loader')
+										}}
+										className='bg-[var(--white)] text-[var(--black)] shadow-[var(--shadow)] cursor-pointer rounded-lg py-2 hover:scale-105 active:scale-95'
+									>
+										loader test
+									</button>
+								</>
 							)}
 						</div>
 					</div>

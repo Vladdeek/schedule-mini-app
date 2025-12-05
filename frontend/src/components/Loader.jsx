@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Loader = () => {
+	const light = '#B690F9'
+	const middle = '#742bf3'
+	const dark = '#610EF1'
 	return (
 		<StyledWrapper>
 			<svg
@@ -34,7 +37,7 @@ const Loader = () => {
 							strokeDashoffset={402}
 							strokeDasharray='402.12 402.12'
 							strokeWidth={30}
-							stroke='#f43b75'
+							stroke={middle}
 							r={64}
 							className='pencil__body1'
 						/>
@@ -43,7 +46,7 @@ const Loader = () => {
 							strokeDashoffset={465}
 							strokeDasharray='464.96 464.96'
 							strokeWidth={10}
-							stroke='#fd598d'
+							stroke={light}
 							r={74}
 							className='pencil__body2'
 						/>
@@ -52,19 +55,19 @@ const Loader = () => {
 							strokeDashoffset={339}
 							strokeDasharray='339.29 339.29'
 							strokeWidth={10}
-							stroke='#f02364'
+							stroke={light}
 							r={54}
 							className='pencil__body3'
 						/>
 					</g>
 					<g transform='rotate(-90) translate(49,0)' className='pencil__eraser'>
 						<g className='pencil__eraser-skew'>
-							<rect height={30} width={30} ry={5} rx={5} fill='#fd598d' />
+							<rect height={30} width={30} ry={5} rx={5} fill={middle} />
 							<rect
 								clipPath='url(#pencil-eraser)'
 								height={30}
 								width={5}
-								fill='#f02364'
+								fill={dark}
 							/>
 							<rect height={20} width={30} fill='hsl(223,10%,90%)' />
 							<rect height={20} width={15} fill='hsl(223,10%,70%)' />
